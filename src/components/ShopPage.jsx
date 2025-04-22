@@ -4,8 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import arrow from "../assets/arrownext.svg";
 import products from "../data/products";
-
-import "../styles/ShopPage.css";
+import "../styles/Hero.css";
 const ShopPage = ({ addToCart }) => {
   const pageRef = useRef(null);
   const headerRef = useRef(null);
@@ -23,8 +22,8 @@ const ShopPage = ({ addToCart }) => {
 
     // Apply category filtering
     if (activeCategory !== "all") {
-      productsToShow = productsToShow.filter(product =>
-        product.category === activeCategory
+      productsToShow = productsToShow.filter(
+        (product) => product.category === activeCategory
       );
     }
 
@@ -119,7 +118,10 @@ const ShopPage = ({ addToCart }) => {
   };
 
   // Get unique categories from products
-  const categories = ["all", ...new Set(products.map(product => product.category))];
+  const categories = [
+    "all",
+    ...new Set(products.map((product) => product.category)),
+  ];
 
   return (
     <div ref={pageRef} className="products-page">
@@ -127,7 +129,9 @@ const ShopPage = ({ addToCart }) => {
         <div ref={headerRef} className="products-header">
           <div className="breadcrumb">
             <Link to="/shop">PRODUCTS</Link> /
-            <span>{activeCategory === "all" ? "ALL" : activeCategory.toUpperCase()}</span>
+            <span>
+              {activeCategory === "all" ? "ALL" : activeCategory.toUpperCase()}
+            </span>
           </div>
 
           <div className="products-sorting">
@@ -216,7 +220,9 @@ const ShopPage = ({ addToCart }) => {
                 {categories.map((category) => (
                   <li
                     key={category}
-                    className={`category-item ${activeCategory === category ? 'active' : ''}`}
+                    className={`category-item ${
+                      activeCategory === category ? "active" : ""
+                    }`}
                   >
                     <button
                       className="category-link-button"
@@ -224,8 +230,7 @@ const ShopPage = ({ addToCart }) => {
                     >
                       {category === "all"
                         ? "All Products"
-                        : category.charAt(0).toUpperCase() + category.slice(1)
-                      }
+                        : category.charAt(0).toUpperCase() + category.slice(1)}
                     </button>
                   </li>
                 ))}
@@ -266,11 +271,31 @@ const ShopPage = ({ addToCart }) => {
             <div className="sidebar-section">
               <h3 className="sidebar-title">COLOR</h3>
               <div className="color-options">
-                <button className="color-option" style={{ backgroundColor: "#ffffff" }} title="White"></button>
-                <button className="color-option" style={{ backgroundColor: "#f5f5dc" }} title="Beige"></button>
-                <button className="color-option" style={{ backgroundColor: "#808080" }} title="Gray"></button>
-                <button className="color-option" style={{ backgroundColor: "#1e3a8a" }} title="Blue"></button>
-                <button className="color-option" style={{ backgroundColor: "#172554" }} title="Navy"></button>
+                <button
+                  className="color-option"
+                  style={{ backgroundColor: "#ffffff" }}
+                  title="White"
+                ></button>
+                <button
+                  className="color-option"
+                  style={{ backgroundColor: "#f5f5dc" }}
+                  title="Beige"
+                ></button>
+                <button
+                  className="color-option"
+                  style={{ backgroundColor: "#808080" }}
+                  title="Gray"
+                ></button>
+                <button
+                  className="color-option"
+                  style={{ backgroundColor: "#1e3a8a" }}
+                  title="Blue"
+                ></button>
+                <button
+                  className="color-option"
+                  style={{ backgroundColor: "#172554" }}
+                  title="Navy"
+                ></button>
               </div>
             </div>
 
@@ -293,10 +318,7 @@ const ShopPage = ({ addToCart }) => {
                 <div key={product.id} className="product-card">
                   <div className="product-image">
                     <Link to={`/product/${product.id}`}>
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                      />
+                      <img src={product.image} alt={product.name} />
                       {product.isNew && (
                         <span className="badge new-badge">NEW</span>
                       )}
@@ -324,7 +346,9 @@ const ShopPage = ({ addToCart }) => {
               ))
             ) : (
               <div className="no-products-message">
-                <p>No products found in this category. Try a different filter.</p>
+                <p>
+                  No products found in this category. Try a different filter.
+                </p>
               </div>
             )}
           </div>

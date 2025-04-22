@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "../styles/FeaturedProducts.css";
+import "../styles/Hero.css";
 import products from "../data/products";
 
 // Register ScrollTrigger plugin
@@ -50,7 +50,8 @@ const FeaturedProducts = () => {
     });
 
     // Products animation - staggered entry
-    const productElements = productsRef.current.querySelectorAll(".product-card");
+    const productElements =
+      productsRef.current.querySelectorAll(".product-card");
     gsap.from(productElements, {
       y: 50,
       opacity: 0,
@@ -71,7 +72,7 @@ const FeaturedProducts = () => {
   }, []);
 
   // Get only featured products from our data
-  const featuredProducts = products.filter(product => product.featured);
+  const featuredProducts = products.filter((product) => product.featured);
 
   return (
     <section className="featured-section" ref={sectionRef}>

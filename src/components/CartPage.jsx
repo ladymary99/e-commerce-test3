@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
-import "../styles/CartPage.css";
+import "../styles/Hero.css";
 import Checkout from "./Checkout";
 
 const CartItem = ({ item, removeFromCart, updateQuantity }) => {

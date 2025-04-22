@@ -6,7 +6,7 @@ import arrow from "../assets/arrow.svg";
 import lifestyleImg from "../assets/bed.jpg";
 import apparelImg from "../assets/bb1.jpg";
 import collectiblesImg from "../assets/pillow-blue2.jpg";
-import "../styles/CategorySection.css";
+import "../styles/Hero.css";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -161,8 +161,9 @@ const CategorySection = () => {
         <div className="category-header">
           <h2 ref={titleRef}>Shop by category</h2>
           <p ref={textRef}>
-            Explore our premium textile collection to transform your home: from luxurious
-            bedspreads and cozy blankets to stylish decorative pillows.
+            Explore our premium textile collection to transform your home: from
+            luxurious bedspreads and cozy blankets to stylish decorative
+            pillows.
           </p>
           <Link to="/shop">
             <div className="button-container" ref={buttonRef}>
