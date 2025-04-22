@@ -1095,7 +1095,6 @@ textarea:invalid:focus {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-  margin-bottom: 3rem;
 }
 
 @media (min-width: 992px) {
