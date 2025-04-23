@@ -1380,7 +1380,7 @@ textarea:invalid:focus {
 
 .category-item.active {
   font-weight: bold;
-  color: #333;
+  color: lightblue;
 }
 
 .category-link-button {
