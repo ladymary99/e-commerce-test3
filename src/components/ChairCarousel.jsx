@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import ColorSwitch from "./ColorSwitch";
-import "./ChairCarousel.css";
+import "../styles/Hero.css";
 
 const ChairCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
