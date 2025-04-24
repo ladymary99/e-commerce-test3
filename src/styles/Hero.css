@@ -954,42 +954,6 @@ textarea:invalid:focus {
   min-height: 100vh;
 }
 
-/* Top Banner */
-.top-banner {
-  background-color: #f2f2f2;
-  padding: 0.5rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: var(--font-size-sm);
-}
-
-.banner-content {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.banner-content span:first-child {
-  font-weight: 600;
-}
-
-.banner-message {
-  color: var(--color-text-secondary);
-}
-
-.banner-link {
-  color: var(--color-accent);
-  text-decoration: underline;
-}
-
-.banner-close-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--color-text-secondary);
-  padding: 0.25rem;
-}
 
 /* Products Header */
 .products-header {
